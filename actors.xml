@@ -1,0 +1,101 @@
+<!-- EventPersistence -->
+
+<Events>
+    <Event id="initial">
+        <Class>Once</Class>
+        <Schedule>+ 5s</Schedule>
+        <Action>Pool-Skimmer:OFF</Action>
+        <Action>Pool-Sweep:OFF</Action>
+        <Action>PartyRoom-Chandeliers:OFF</Action>
+        <Action>KitchenSink-Lights:OFF</Action>
+        <Action>Kitchen-Lights:OFF</Action>
+        <Action>KitchenTable-Lights:OFF</Action>
+        <Action>FrontDoor-Lights:OFF</Action>
+        <Action>KidsBathRm-Lights:OFF</Action>
+        <Action>MasterShower-Lights:OFF</Action>
+        <Action>Hallway-Lights:ON</Action>
+        <Action>Roof-XmasLights:OFF</Action>
+    </Event>
+	<!--
+	<Event id="Office Test 1">
+		<Class>Schedule</Class>
+		<Schedule>+ 30s</Schedule>
+		<Action>Office-Test:ON</Action>
+		<Action when="+ 10s">Office-Test:OFF</Action>
+	</Event>
+	-->
+    <Event id="Pool pumps">
+        <Class>Schedule</Class>
+        <Schedule>01:00</Schedule>
+        <Action>Pool-Skimmer:ON</Action>
+        <Action when="01:01">Pool-Sweep:ON</Action>
+        <Action when="02:01">Pool-Sweep:OFF</Action>
+        <Action when="02:02">Pool-Sweep:OFF</Action>
+        <Action when="02:02">Pool-Sweep:OFF</Action>
+        <Action when="05:00">Pool-Skimmer:OFF</Action>
+        <Action when="05:01">Pool-Skimmer:OFF</Action>
+        <Action when="05:02">Pool-Skimmer:OFF</Action>
+    </Event>
+    <Event id="School wakeup">
+        <Class>Schedule</Class>
+        <Schedule>weekday 06:30</Schedule>
+        <Action>Nicolas-Bedroom-Lights:ON</Action>
+        <Action>Jackie-bedroom-Lights:ON</Action>
+        <Action when="07:30">Nicolas-Bedroom-Lights:OFF</Action>
+        <Action>Jackie-bedroom-Lights:OFF</Action>
+    </Event>
+    <Event id="Kitchen lights">
+        <Class>Schedule</Class>
+        <Schedule>06:30</Schedule>
+        <Action>KitchenTable-Lights:ON</Action>
+        <Action when="08:30">KitchenTable-Lights:OFF</Action>
+        <Action>FrontDoor-Lights:OFF</Action>
+    </Event>
+    <Event id="Sunset lights">
+        <Class>Schedule</Class>
+        <Schedule>sunset</Schedule>
+        <Action>Hallway-Lights:ON</Action>
+        <Action>KitchenSink-Lights:ON</Action>
+        <Action>Kitchen-Lights:ON</Action>
+        <Action>KitchenTable-Lights:ON</Action>
+        <Action>GarageBathRm-Lights:ON</Action>
+        <Action>Garage-Lights:ON</Action>
+        <Action>FrontDoor-Lights:ON</Action>
+        <Action>Roof-XmasLights:ON</Action>
+    </Event>
+    <Event id="Evening lights">
+        <Class>Schedule</Class>
+        <Schedule>22:00</Schedule>
+        <Action>PartyRoom-Chandeliers:OFF</Action>
+        <Action>KitchenSink-Lights:OFF</Action>
+        <Action>Kitchen-Lights:OFF</Action>
+        <Action>KitchenTable-Lights:OFF</Action>
+        <Action>FrontDoor-Lights:OFF</Action>
+<!--        <Action>KidsBathRm-Lights:OFF</Action> -->
+        <Action>MasterShower-Lights:OFF</Action>
+        <Action>Hallway-Lights:ON</Action>
+        <Action>Roof-XmasLights:OFF</Action>
+    </Event>
+    <Event id="Shower lights">
+        <Class>Schedule</Class>
+        <Schedule>08:00</Schedule>
+        <Action>MasterShower-Lights:ON</Action>
+        <Action when="+ 1h">MasterShower-Lights:OFF</Action>
+    </Event>
+    <Event id="Sunrise">
+        <Class>Schedule</Class>
+        <Schedule>sunrise</Schedule>
+        <Action>Hallway-Lights:OFF</Action>
+        <Action>Garage-Lights:OFF</Action>
+        <Action>KitchenSink-Lights:OFF</Action>
+        <Action>Kitchen-Lights:OFF</Action>
+        <Action>KitchenTable-Lights:OFF</Action>
+    </Event>
+    <Event id="Late Night">
+        <Class>Schedule</Class>
+        <Schedule>00:00</Schedule>
+        <Action>KidsBathRm-Lights:OFF</Action>
+        <Action>FrontDoor-Lights:OFF</Action>
+    </Event>
+</Events>
+
